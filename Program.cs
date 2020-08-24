@@ -28,7 +28,6 @@ namespace test
                     Console.ForegroundColor = ConsoleColor.White;
                     Console.WriteLine(i);
                 }
-
             }
         }
 
