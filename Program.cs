@@ -6,27 +6,35 @@ namespace test
     {
         static void drawThousand()
         {
-            for (int i = 0; i < 1000; i++)
+            for (int i = 1; i < 1001; i++)
             {
-                Console.WriteLine(i + 1);
-            }
-        }
-        static void modoThree()
+                if (i > 1 && (i % 3 == 0 && i % 5 == 0))
+                {
+                    Console.ForegroundColor = ConsoleColor.Cyan;
+                    Console.WriteLine("Fizzbuzz!");
+                }
+                else if (i > 1 && i % 3 == 0)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Fizz!");
+                }
+                else if (i > 1 && (i % 5 == 0))
+                {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine("Buzz!");
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine(i);
+                }
 
-        {
-            bool modu = false;
-            int x;
-            x = 9;
-            if ((x % 3) == 0)
-            {
-                modu = true;
             }
-            Console.WriteLine(modu);
         }
+
         static void Main()
         {
             drawThousand();
-            modoThree();
             Console.ReadLine();
         }
     }
